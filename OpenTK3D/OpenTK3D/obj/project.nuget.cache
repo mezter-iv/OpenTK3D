@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "hw/IhUvSyXw=",
+  "dgSpecHash": "KhbhDqtDEto=",
   "success": true,
-  "projectFilePath": "D:\\ItStepHW\\C++\\Homeworks\\OpenTK3D\\OpenTK3D\\OpenTK3D.csproj",
+  "projectFilePath": "C:\\Users\\vovan\\OneDrive\\Документы\\GitHub\\OpenTK3D\\OpenTK3D\\OpenTK3D\\OpenTK3D\\OpenTK3D.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\vovan\\.nuget\\packages\\opentk\\4.9.4\\opentk.4.9.4.nupkg.sha512",
     "C:\\Users\\vovan\\.nuget\\packages\\opentk.audio.openal\\4.9.4\\opentk.audio.openal.4.9.4.nupkg.sha512",

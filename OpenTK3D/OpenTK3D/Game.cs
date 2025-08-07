@@ -15,6 +15,8 @@ namespace OpenTK3D
     {
         int width, height, vbo, vao, shaderProgram, ebo, textureID, texturVBO;
 
+        Camera camera;
+
         float yRot = 0f;
 
         List<Vector3> vertices = new List<Vector3>()
@@ -175,6 +177,9 @@ namespace OpenTK3D
             GL.BindTexture(TextureTarget.Texture2D, 0);
 
             GL.Enable(EnableCap.DepthTest);
+
+            camera = new Camera(width, height, Vector3.Zero);
+            CursorState = CursorState.Grabbed;
         }
         protected override void OnUnload()
         {
@@ -195,7 +200,11 @@ namespace OpenTK3D
         }
         protected override void OnUpdateFrame(FrameEventArgs args)
         {
+            MouseState mouse = MouseState;
+            KeyboardState keyboard = KeyboardState;
+
             base.OnUpdateFrame(args);
+            camera.Update(keyboard, mouse, args);
         }
         protected override void OnRenderFrame(FrameEventArgs args)
         {
@@ -207,8 +216,8 @@ namespace OpenTK3D
             GL.BindTexture(TextureTarget.Texture2D, textureID);
 
             Matrix4 model = Matrix4.Identity;
-            Matrix4 view = Matrix4.Identity;
-            Matrix4 projection = Matrix4.CreatePerspectiveFieldOfView(MathHelper.DegreesToRadians(60.0F), width/height, 0.1f, 100.0f);
+            Matrix4 view = camera.getViewMatrix();
+            Matrix4 projection = camera.getProjectionMatrix();
 
             model = Matrix4.CreateRotationY(yRot);
             yRot += 0.001f;
