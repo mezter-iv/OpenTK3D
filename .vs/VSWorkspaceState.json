@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\OpenTK3D"
+    "\\OpenTK3D",
+    "\\OpenTK3D\\OpenTK3D"
   ],
-  "SelectedNode": "\\OpenTK3D\\OpenTK3D.sln",
+  "SelectedNode": "\\OpenTK3D\\OpenTK3D\\Game.cs",
   "PreviewInSolutionExplorer": false
 }

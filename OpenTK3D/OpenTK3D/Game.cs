@@ -1,19 +1,27 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Text;
+﻿using OpenTK.Compute.OpenCL;
 using OpenTK.Graphics.OpenGL4;
 using OpenTK.Mathematics;
 using OpenTK.Windowing.Common;
 using OpenTK.Windowing.Desktop;
 using OpenTK.Windowing.GraphicsLibraryFramework;
+using OpenTK3D.Graphics;
 using StbImageSharp;
+using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Text;
 
 namespace OpenTK3D
 {
     internal class Game : GameWindow
     {
-        int width, height, vbo, vao, shaderProgram, ebo, textureID, texturVBO;
+        int width, height;
+
+        VAO vao;
+        VBO vbo;
+        ShaderProgram program;
+        Texture texture;
+        IBO ibo;
 
         Camera camera;
 
@@ -84,7 +92,7 @@ namespace OpenTK3D
             new Vector2(0f, 0f)
         };
 
-        uint[] indices = { 
+        List<uint> indices = new List<uint> { 
             0, 1, 2,
             2, 3, 0,
 
@@ -113,68 +121,19 @@ namespace OpenTK3D
         {
             base.OnLoad();
 
-            vao = GL.GenVertexArray();
-            GL.BindVertexArray(vao);
+            vao = new VAO();
 
-            GL.VertexAttribPointer(0, 3, VertexAttribPointerType.Float, false, 0, 0);
-            GL.EnableVertexArrayAttrib(vao, 0);
-            GL.BindBuffer(BufferTarget.ArrayBuffer, 0);
+            vbo = new VBO(vertices);
+            vao.LinkToVAO(0, 3, vbo);
+            VBO uvVBO = new VBO(texCoords);
+            vao.LinkToVAO(1, 2, uvVBO);
 
-            vbo = GL.GenBuffer();
-            GL.BindBuffer(BufferTarget.ArrayBuffer, vbo);
-            GL.BufferData(BufferTarget.ArrayBuffer, vertices.Count * Vector3.SizeInBytes, vertices.ToArray(), BufferUsageHint.StaticDraw);
+            ibo = new IBO(indices);
 
-            GL.VertexAttribPointer(0, 3, VertexAttribPointerType.Float, false, 0, 0);
-            GL.EnableVertexArrayAttrib(vao, 0);
-            GL.BindBuffer(BufferTarget.ArrayBuffer, 0);
+            program = new ShaderProgram("Default.vert", "Default.frag");
 
-            texturVBO = GL.GenBuffer();
-            GL.BindBuffer(BufferTarget.ArrayBuffer, texturVBO);
-            GL.BufferData(BufferTarget.ArrayBuffer, texCoords.Count * Vector2.SizeInBytes, texCoords.ToArray(), BufferUsageHint.StaticDraw);
-
-            GL.VertexAttribPointer(1, 2, VertexAttribPointerType.Float, false, 0, 0);
-            GL.EnableVertexArrayAttrib(vao, 1);
-
-            GL.BindVertexArray(0);
-
-            ebo = GL.GenBuffer();
-            GL.BindBuffer(BufferTarget.ElementArrayBuffer, ebo);
-            GL.BufferData(BufferTarget.ElementArrayBuffer, indices.Length * sizeof(uint), indices, BufferUsageHint.StaticDraw);
-            GL.BindBuffer(BufferTarget.ElementArrayBuffer, 0);
-
-            shaderProgram = GL.CreateProgram();
-
-            int vertexShader = GL.CreateShader(ShaderType.VertexShader);
-            GL.ShaderSource(vertexShader, LoadShaderSourse("Default.vert"));
-            GL.CompileShader(vertexShader);
-
-            int fragmentShader = GL.CreateShader(ShaderType.FragmentShader);
-            GL.ShaderSource(fragmentShader, LoadShaderSourse("Default.frag"));
-            GL.CompileShader(fragmentShader);
-
-            GL.AttachShader(shaderProgram, vertexShader);
-            GL.AttachShader(shaderProgram, fragmentShader);
-
-            GL.LinkProgram(shaderProgram);
-
-            GL.DeleteShader(vertexShader);
-            GL.DeleteShader(fragmentShader);
-
-            textureID = GL.GenTexture();
-            GL.ActiveTexture(TextureUnit.Texture0);
-            GL.BindTexture(TextureTarget.Texture2D, textureID);
-
-            GL.TexParameter(TextureTarget.Texture2D, TextureParameterName.TextureWrapS, (int)TextureWrapMode.Repeat);
-            GL.TexParameter(TextureTarget.Texture2D, TextureParameterName.TextureWrapT, (int)TextureWrapMode.Repeat);
-            GL.TexParameter(TextureTarget.Texture2D, TextureParameterName.TextureMinFilter, (int)TextureMinFilter.Nearest);
-            GL.TexParameter(TextureTarget.Texture2D, TextureParameterName.TextureMagFilter, (int)TextureMagFilter.Nearest);
-
-            StbImage.stbi_set_flip_vertically_on_load(1);
-            ImageResult dirtTexture = ImageResult.FromStream(File.OpenRead("../../../Textures/DirtText.PNG"), ColorComponents.RedGreenBlueAlpha);
-
-            GL.TexImage2D(TextureTarget.Texture2D, 0, PixelInternalFormat.Rgba, dirtTexture.Width, dirtTexture.Height, 0, PixelFormat.Rgba, PixelType.UnsignedByte, dirtTexture.Data);
-
-            GL.BindTexture(TextureTarget.Texture2D, 0);
+            texture = new Texture("DirtText.PNG");
+           
 
             GL.Enable(EnableCap.DepthTest);
 
@@ -185,11 +144,11 @@ namespace OpenTK3D
         {
             base.OnUnload();
 
-            GL.DeleteVertexArray(vao);
-            GL.DeleteBuffer(vbo);
-            GL.DeleteBuffer(ebo);
-            GL.DeleteShader(textureID);
-            GL.DeleteProgram(shaderProgram);
+            vao.Delete();
+            vbo.Delete();
+            ibo.Delete();
+            program.Delete();
+
         }
         protected override void OnResize(ResizeEventArgs e)
         {
@@ -211,9 +170,10 @@ namespace OpenTK3D
             GL.ClearColor(0.6f, 0.3f, 1f, 1f);
             GL.Clear(ClearBufferMask.ColorBufferBit | ClearBufferMask.DepthBufferBit);
 
-            GL.UseProgram(shaderProgram);
-
-            GL.BindTexture(TextureTarget.Texture2D, textureID);
+            program.Bind();
+            vao.Bind();
+            ibo.Bind();
+            texture.Bind();
 
             Matrix4 model = Matrix4.Identity;
             Matrix4 view = camera.getViewMatrix();
@@ -225,36 +185,25 @@ namespace OpenTK3D
             Matrix4 translation = Matrix4.CreateTranslation(0f, 0f, -3f);
             model *= translation;
 
-            int modelLocation = GL.GetUniformLocation(shaderProgram, "model");
-            int viewLocation = GL.GetUniformLocation(shaderProgram, "view");
-            int projectionLocation = GL.GetUniformLocation(shaderProgram, "projection");
+            int modelLocation = GL.GetUniformLocation(program.ID, "model");
+            int viewLocation = GL.GetUniformLocation(program.ID, "view");
+            int projectionLocation = GL.GetUniformLocation(program.ID, "projection");
 
             GL.UniformMatrix4(modelLocation, true, ref model);
             GL.UniformMatrix4(viewLocation, true, ref view);
             GL.UniformMatrix4(projectionLocation, true, ref projection);
 
-            GL.BindVertexArray(vao);
-            GL.BindBuffer(BufferTarget.ElementArrayBuffer, ebo);
-            GL.DrawElements(PrimitiveType.Triangles, indices.Length, DrawElementsType.UnsignedInt, 0);
+            GL.BindVertexArray(vao.ID);
+            GL.BindBuffer(BufferTarget.ElementArrayBuffer, ibo.ID);
+            GL.DrawElements(PrimitiveType.Triangles, indices.Count, DrawElementsType.UnsignedInt, 0);
             GL.DrawArrays(PrimitiveType.Triangles, 0, 3);
+
+            model += Matrix4.CreateTranslation(new Vector3(2f, 0f, 0f));
+            GL.UniformMatrix4(modelLocation, true, ref model);
+            GL.DrawElements(PrimitiveType.Triangles, indices.Count, DrawElementsType.UnsignedInt, 0);
 
             SwapBuffers();
             base.OnRenderFrame(args);
-        }
-        public static string LoadShaderSourse(string fp) {
-            string shaderSourse = "";
-
-            try {
-                using (var r = new StreamReader("../../../Shaders/" + fp)) {
-                    shaderSourse = r.ReadToEnd();
-                }
-            }
-            catch (Exception e) {
-                Console.WriteLine(e.Message);
-            }
-
-
-            return shaderSourse;
         }
     }
 }

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("OpenTK3D")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+652fd92a73b869ca181d9219e01a15e379746359")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d54e4eca571855bb846d0352569625ff716e7338")]
 [assembly: System.Reflection.AssemblyProductAttribute("OpenTK3D")]
 [assembly: System.Reflection.AssemblyTitleAttribute("OpenTK3D")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
