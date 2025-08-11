@@ -3,36 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\vovan\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\OpenTK3D\\OpenTK3D\\OpenTK3D\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1FFD7A04-02C6-454D-87D0-277A6BD1B19E}|OpenTK3D\\OpenTK3D.csproj|c:\\users\\vovan\\onedrive\\\u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\github\\opentk3d\\opentk3d\\opentk3d\\opentk3d\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1FFD7A04-02C6-454D-87D0-277A6BD1B19E}|OpenTK3D\\OpenTK3D.csproj|solutionrelative:opentk3d\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1FFD7A04-02C6-454D-87D0-277A6BD1B19E}|OpenTK3D\\OpenTK3D.csproj|c:\\users\\vovan\\onedrive\\\u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\github\\opentk3d\\opentk3d\\opentk3d\\opentk3d\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1FFD7A04-02C6-454D-87D0-277A6BD1B19E}|OpenTK3D\\OpenTK3D.csproj|solutionrelative:opentk3d\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1FFD7A04-02C6-454D-87D0-277A6BD1B19E}|OpenTK3D\\OpenTK3D.csproj|c:\\users\\vovan\\onedrive\\\u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\github\\opentk3d\\opentk3d\\opentk3d\\opentk3d\\graphics\\vbo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1FFD7A04-02C6-454D-87D0-277A6BD1B19E}|OpenTK3D\\OpenTK3D.csproj|solutionrelative:opentk3d\\graphics\\vbo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1FFD7A04-02C6-454D-87D0-277A6BD1B19E}|OpenTK3D\\OpenTK3D.csproj|c:\\users\\vovan\\onedrive\\\u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\github\\opentk3d\\opentk3d\\opentk3d\\opentk3d\\graphics\\shaderprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1FFD7A04-02C6-454D-87D0-277A6BD1B19E}|OpenTK3D\\OpenTK3D.csproj|solutionrelative:opentk3d\\graphics\\shaderprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1FFD7A04-02C6-454D-87D0-277A6BD1B19E}|OpenTK3D\\OpenTK3D.csproj|c:\\users\\vovan\\onedrive\\\u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\github\\opentk3d\\opentk3d\\opentk3d\\opentk3d\\graphics\\texture.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1FFD7A04-02C6-454D-87D0-277A6BD1B19E}|OpenTK3D\\OpenTK3D.csproj|solutionrelative:opentk3d\\graphics\\texture.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1FFD7A04-02C6-454D-87D0-277A6BD1B19E}|OpenTK3D\\OpenTK3D.csproj|c:\\users\\vovan\\onedrive\\\u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\github\\opentk3d\\opentk3d\\opentk3d\\opentk3d\\graphics\\vao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1FFD7A04-02C6-454D-87D0-277A6BD1B19E}|OpenTK3D\\OpenTK3D.csproj|solutionrelative:opentk3d\\graphics\\vao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1FFD7A04-02C6-454D-87D0-277A6BD1B19E}|OpenTK3D\\OpenTK3D.csproj|c:\\users\\vovan\\onedrive\\\u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\github\\opentk3d\\opentk3d\\opentk3d\\opentk3d\\graphics\\ibo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1FFD7A04-02C6-454D-87D0-277A6BD1B19E}|OpenTK3D\\OpenTK3D.csproj|solutionrelative:opentk3d\\graphics\\ibo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1FFD7A04-02C6-454D-87D0-277A6BD1B19E}|OpenTK3D\\OpenTK3D.csproj|c:\\users\\vovan\\onedrive\\\u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\github\\opentk3d\\opentk3d\\opentk3d\\opentk3d\\world\\chunk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1FFD7A04-02C6-454D-87D0-277A6BD1B19E}|OpenTK3D\\OpenTK3D.csproj|solutionrelative:opentk3d\\world\\chunk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1FFD7A04-02C6-454D-87D0-277A6BD1B19E}|OpenTK3D\\OpenTK3D.csproj|c:\\users\\vovan\\onedrive\\\u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\github\\opentk3d\\opentk3d\\opentk3d\\opentk3d\\camera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1FFD7A04-02C6-454D-87D0-277A6BD1B19E}|OpenTK3D\\OpenTK3D.csproj|solutionrelative:opentk3d\\camera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FFD7A04-02C6-454D-87D0-277A6BD1B19E}|OpenTK3D\\OpenTK3D.csproj|c:\\users\\vovan\\onedrive\\\u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\github\\opentk3d\\opentk3d\\opentk3d\\opentk3d\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1FFD7A04-02C6-454D-87D0-277A6BD1B19E}|OpenTK3D\\OpenTK3D.csproj|solutionrelative:opentk3d\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FFD7A04-02C6-454D-87D0-277A6BD1B19E}|OpenTK3D\\OpenTK3D.csproj|c:\\users\\vovan\\onedrive\\\u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\github\\opentk3d\\opentk3d\\opentk3d\\opentk3d\\world\\block.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1FFD7A04-02C6-454D-87D0-277A6BD1B19E}|OpenTK3D\\OpenTK3D.csproj|solutionrelative:opentk3d\\world\\block.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FFD7A04-02C6-454D-87D0-277A6BD1B19E}|OpenTK3D\\OpenTK3D.csproj|c:\\users\\vovan\\onedrive\\\u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\github\\opentk3d\\opentk3d\\opentk3d\\opentk3d\\world\\blockdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1FFD7A04-02C6-454D-87D0-277A6BD1B19E}|OpenTK3D\\OpenTK3D.csproj|solutionrelative:opentk3d\\world\\blockdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,112 +34,87 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 6,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Camera.cs",
+              "DocumentMoniker": "C:\\Users\\vovan\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\OpenTK3D\\OpenTK3D\\OpenTK3D\\OpenTK3D\\Camera.cs",
+              "RelativeDocumentMoniker": "OpenTK3D\\Camera.cs",
+              "ToolTip": "C:\\Users\\vovan\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\OpenTK3D\\OpenTK3D\\OpenTK3D\\OpenTK3D\\Camera.cs",
+              "RelativeToolTip": "OpenTK3D\\Camera.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAkwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-07T08:34:03.712Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Chunk.cs",
+              "DocumentMoniker": "C:\\Users\\vovan\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\OpenTK3D\\OpenTK3D\\OpenTK3D\\OpenTK3D\\World\\Chunk.cs",
+              "RelativeDocumentMoniker": "OpenTK3D\\World\\Chunk.cs",
+              "ToolTip": "C:\\Users\\vovan\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\OpenTK3D\\OpenTK3D\\OpenTK3D\\OpenTK3D\\World\\Chunk.cs",
+              "RelativeToolTip": "OpenTK3D\\World\\Chunk.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAADwvzcAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-11T19:05:34.651Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "ShaderProgram.cs",
-              "DocumentMoniker": "C:\\Users\\vovan\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\OpenTK3D\\OpenTK3D\\OpenTK3D\\OpenTK3D\\Graphics\\ShaderProgram.cs",
-              "RelativeDocumentMoniker": "OpenTK3D\\Graphics\\ShaderProgram.cs",
-              "ToolTip": "C:\\Users\\vovan\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\OpenTK3D\\OpenTK3D\\OpenTK3D\\OpenTK3D\\Graphics\\ShaderProgram.cs",
-              "RelativeToolTip": "OpenTK3D\\Graphics\\ShaderProgram.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAowCEAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-09T12:59:22.732Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Texture.cs",
-              "DocumentMoniker": "C:\\Users\\vovan\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\OpenTK3D\\OpenTK3D\\OpenTK3D\\OpenTK3D\\Graphics\\Texture.cs",
-              "RelativeDocumentMoniker": "OpenTK3D\\Graphics\\Texture.cs",
-              "ToolTip": "C:\\Users\\vovan\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\OpenTK3D\\OpenTK3D\\OpenTK3D\\OpenTK3D\\Graphics\\Texture.cs",
-              "RelativeToolTip": "OpenTK3D\\Graphics\\Texture.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAABqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-09T12:54:56.912Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "IBO.cs",
-              "DocumentMoniker": "C:\\Users\\vovan\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\OpenTK3D\\OpenTK3D\\OpenTK3D\\OpenTK3D\\Graphics\\IBO.cs",
-              "RelativeDocumentMoniker": "OpenTK3D\\Graphics\\IBO.cs",
-              "ToolTip": "C:\\Users\\vovan\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\OpenTK3D\\OpenTK3D\\OpenTK3D\\OpenTK3D\\Graphics\\IBO.cs",
-              "RelativeToolTip": "OpenTK3D\\Graphics\\IBO.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAawBUAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-09T12:49:26.24Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "VAO.cs",
-              "DocumentMoniker": "C:\\Users\\vovan\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\OpenTK3D\\OpenTK3D\\OpenTK3D\\OpenTK3D\\Graphics\\VAO.cs",
-              "RelativeDocumentMoniker": "OpenTK3D\\Graphics\\VAO.cs",
-              "ToolTip": "C:\\Users\\vovan\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\OpenTK3D\\OpenTK3D\\OpenTK3D\\OpenTK3D\\Graphics\\VAO.cs",
-              "RelativeToolTip": "OpenTK3D\\Graphics\\VAO.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABUAAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-09T12:45:52.87Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "VBO.cs",
-              "DocumentMoniker": "C:\\Users\\vovan\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\OpenTK3D\\OpenTK3D\\OpenTK3D\\OpenTK3D\\Graphics\\VBO.cs",
-              "RelativeDocumentMoniker": "OpenTK3D\\Graphics\\VBO.cs",
-              "ToolTip": "C:\\Users\\vovan\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\OpenTK3D\\OpenTK3D\\OpenTK3D\\OpenTK3D\\Graphics\\VBO.cs",
-              "RelativeToolTip": "OpenTK3D\\Graphics\\VBO.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAA1wCAAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-09T12:38:49.8Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Camera.cs",
-              "DocumentMoniker": "C:\\Users\\vovan\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\OpenTK3D\\OpenTK3D\\OpenTK3D\\OpenTK3D\\Camera.cs",
-              "RelativeDocumentMoniker": "OpenTK3D\\Camera.cs",
-              "ToolTip": "C:\\Users\\vovan\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\OpenTK3D\\OpenTK3D\\OpenTK3D\\OpenTK3D\\Camera.cs",
-              "RelativeToolTip": "OpenTK3D\\Camera.cs",
-              "ViewState": "AgIAACIAAAAAAAAAAAAgwGcAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-07T08:34:03.712Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "Game.cs",
               "DocumentMoniker": "C:\\Users\\vovan\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\OpenTK3D\\OpenTK3D\\OpenTK3D\\OpenTK3D\\Game.cs",
               "RelativeDocumentMoniker": "OpenTK3D\\Game.cs",
               "ToolTip": "C:\\Users\\vovan\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\OpenTK3D\\OpenTK3D\\OpenTK3D\\OpenTK3D\\Game.cs",
               "RelativeToolTip": "OpenTK3D\\Game.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAACIAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-07T08:20:22.046Z",
+              "WhenOpened": "2025-08-11T19:03:11.505Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
+              "Title": "Block.cs",
+              "DocumentMoniker": "C:\\Users\\vovan\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\OpenTK3D\\OpenTK3D\\OpenTK3D\\OpenTK3D\\World\\Block.cs",
+              "RelativeDocumentMoniker": "OpenTK3D\\World\\Block.cs",
+              "ToolTip": "C:\\Users\\vovan\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\OpenTK3D\\OpenTK3D\\OpenTK3D\\OpenTK3D\\World\\Block.cs",
+              "RelativeToolTip": "OpenTK3D\\World\\Block.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAgwC8AAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-11T18:50:54.702Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "BlockData.cs",
+              "DocumentMoniker": "C:\\Users\\vovan\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\OpenTK3D\\OpenTK3D\\OpenTK3D\\OpenTK3D\\World\\BlockData.cs",
+              "RelativeDocumentMoniker": "OpenTK3D\\World\\BlockData.cs",
+              "ToolTip": "C:\\Users\\vovan\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\OpenTK3D\\OpenTK3D\\OpenTK3D\\OpenTK3D\\World\\BlockData.cs",
+              "RelativeToolTip": "OpenTK3D\\World\\BlockData.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-11T18:50:51.601Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\vovan\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\OpenTK3D\\OpenTK3D\\OpenTK3D\\OpenTK3D\\Program.cs",
               "RelativeDocumentMoniker": "OpenTK3D\\Program.cs",
               "ToolTip": "C:\\Users\\vovan\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\OpenTK3D\\OpenTK3D\\OpenTK3D\\OpenTK3D\\Program.cs",
               "RelativeToolTip": "OpenTK3D\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAeAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-07T08:20:24.517Z",
               "EditorCaption": ""

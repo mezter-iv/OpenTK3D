@@ -5,6 +5,7 @@ using OpenTK.Windowing.Common;
 using OpenTK.Windowing.Desktop;
 using OpenTK.Windowing.GraphicsLibraryFramework;
 using OpenTK3D.Graphics;
+using OpenTK3D.World;
 using StbImageSharp;
 using System;
 using System.Collections.Generic;
@@ -17,100 +18,12 @@ namespace OpenTK3D
     {
         int width, height;
 
-        VAO vao;
-        VBO vbo;
-        ShaderProgram program;
-        Texture texture;
-        IBO ibo;
-
         Camera camera;
 
         float yRot = 0f;
 
-        List<Vector3> vertices = new List<Vector3>()
-        {
-            new Vector3(-0.5f, 0.5f, 0.5f),
-            new Vector3(0.5f, 0.5f, 0.5f),
-            new Vector3(0.5f, -0.5f, 0.5f),
-            new Vector3(-0.5f, -0.5f, 0.5f),
-
-            new Vector3(0.5f, 0.5f, 0.5f),
-            new Vector3(0.5f, 0.5f, -0.5f),
-            new Vector3(0.5f, -0.5f, -0.5f),
-            new Vector3(0.5f, -0.5f, 0.5f),
-
-            new Vector3(0.5f, 0.5f, -0.5f),
-            new Vector3(-0.5f, 0.5f, -0.5f),
-            new Vector3(-0.5f, -0.5f, -0.5f),
-            new Vector3(0.5f, -0.5f, -0.5f),
-
-            new Vector3(-0.5f, 0.5f, -0.5f),
-            new Vector3(-0.5f, 0.5f, 0.5f),
-            new Vector3(-0.5f, -0.5f, 0.5f),
-            new Vector3(-0.5f, -0.5f, -0.5f),
-
-            new Vector3(-0.5f, 0.5f, -0.5f),
-            new Vector3(0.5f, 0.5f, -0.5f),
-            new Vector3(0.5f, 0.5f, 0.5f),
-            new Vector3(-0.5f, 0.5f, 0.5f),
-
-            new Vector3(-0.5f, -0.5f, 0.5f),
-            new Vector3(0.5f, -0.5f, 0.5f),
-            new Vector3(0.5f, -0.5f, -0.5f),
-            new Vector3(-0.5f, -0.5f, -0.5f),
-        };
-
-        List<Vector2> texCoords = new List<Vector2>() {
-            new Vector2(0f, 1f),
-            new Vector2(1f, 1f),
-            new Vector2(1f, 0f),
-            new Vector2(0f, 0f),
-
-            new Vector2(0f, 1f),
-            new Vector2(1f, 1f),
-            new Vector2(1f, 0f),
-            new Vector2(0f, 0f),
-
-            new Vector2(0f, 1f),
-            new Vector2(1f, 1f),
-            new Vector2(1f, 0f),
-            new Vector2(0f, 0f),
-
-            new Vector2(0f, 1f),
-            new Vector2(1f, 1f),
-            new Vector2(1f, 0f),
-            new Vector2(0f, 0f),
-
-            new Vector2(0f, 1f),
-            new Vector2(1f, 1f),
-            new Vector2(1f, 0f),
-            new Vector2(0f, 0f),
-
-            new Vector2(0f, 1f),
-            new Vector2(1f, 1f),
-            new Vector2(1f, 0f),
-            new Vector2(0f, 0f)
-        };
-
-        List<uint> indices = new List<uint> { 
-            0, 1, 2,
-            2, 3, 0,
-
-            4, 5, 6,
-            6, 7, 4,
-
-            8, 9, 10,
-            10, 11, 8,
-
-            12, 13, 14,
-            14, 15, 12,
-
-            16, 17, 18,
-            18, 19, 16,
-
-            20, 21, 22,
-            22, 23, 20,
-        };
+        Chunk chunk;
+        ShaderProgram program;
 
         public Game(int w, int h) : base(GameWindowSettings.Default, NativeWindowSettings.Default) {
             width = w;
@@ -121,19 +34,11 @@ namespace OpenTK3D
         {
             base.OnLoad();
 
-            vao = new VAO();
-
-            vbo = new VBO(vertices);
-            vao.LinkToVAO(0, 3, vbo);
-            VBO uvVBO = new VBO(texCoords);
-            vao.LinkToVAO(1, 2, uvVBO);
-
-            ibo = new IBO(indices);
+            chunk = new Chunk(new Vector3(0, 0, 0));
 
             program = new ShaderProgram("Default.vert", "Default.frag");
-
-            texture = new Texture("DirtText.PNG");
            
+
 
             GL.Enable(EnableCap.DepthTest);
 
@@ -144,10 +49,7 @@ namespace OpenTK3D
         {
             base.OnUnload();
 
-            vao.Delete();
-            vbo.Delete();
-            ibo.Delete();
-            program.Delete();
+
 
         }
         protected override void OnResize(ResizeEventArgs e)
@@ -170,20 +72,11 @@ namespace OpenTK3D
             GL.ClearColor(0.6f, 0.3f, 1f, 1f);
             GL.Clear(ClearBufferMask.ColorBufferBit | ClearBufferMask.DepthBufferBit);
 
-            program.Bind();
-            vao.Bind();
-            ibo.Bind();
-            texture.Bind();
 
             Matrix4 model = Matrix4.Identity;
             Matrix4 view = camera.getViewMatrix();
             Matrix4 projection = camera.getProjectionMatrix();
 
-            model = Matrix4.CreateRotationY(yRot);
-            yRot += 0.001f;
-
-            Matrix4 translation = Matrix4.CreateTranslation(0f, 0f, -3f);
-            model *= translation;
 
             int modelLocation = GL.GetUniformLocation(program.ID, "model");
             int viewLocation = GL.GetUniformLocation(program.ID, "view");
@@ -193,14 +86,7 @@ namespace OpenTK3D
             GL.UniformMatrix4(viewLocation, true, ref view);
             GL.UniformMatrix4(projectionLocation, true, ref projection);
 
-            GL.BindVertexArray(vao.ID);
-            GL.BindBuffer(BufferTarget.ElementArrayBuffer, ibo.ID);
-            GL.DrawElements(PrimitiveType.Triangles, indices.Count, DrawElementsType.UnsignedInt, 0);
-            GL.DrawArrays(PrimitiveType.Triangles, 0, 3);
-
-            model += Matrix4.CreateTranslation(new Vector3(2f, 0f, 0f));
-            GL.UniformMatrix4(modelLocation, true, ref model);
-            GL.DrawElements(PrimitiveType.Triangles, indices.Count, DrawElementsType.UnsignedInt, 0);
+            chunk.Render(program);
 
             SwapBuffers();
             base.OnRenderFrame(args);
